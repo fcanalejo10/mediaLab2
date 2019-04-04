@@ -15,7 +15,7 @@
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
       </a-assets>
       
-      <a-entity environment="preset: forest"></a-entity>
+      <a-entity environment="preset: forest; dressingColor=#228B22"></a-entity>
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-entity laser-controls line="color: red; opacity: 0.75"></a-entity>
@@ -36,8 +36,10 @@
       </a-pointcloud>
       
       <a-box color="red" rotation="0 30 60" scale="2 2 2" position="7 2 -6"></a-box>
-      <a-sphere color="yellow" scale="2 2 2" position="3 5 -15"></a-sphere>
+      <a-sphere scale="2 2 2" position="3 5 -15"></a-sphere>
 
+	<a-image position="0 -.025 0" height="300" width="300" rotation="90 0 0" src="#ground" repeat="300 300" material="color:#ebd9e9" geometry=""></a-image>
+	    
       <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7" width="3.5" height="4.5" position="-2 2.5 -4" rotation="0 0 0" gui-item="" geometry="" material="" gui-flex-container="">
 			<a-gui-button width="2.5" height="0.75" onclick="testButtonAction" key-code="32" value="test button" font-family="Arial" margin="0 0 0.05 0" gui-interactable="" gui-item="" geometry="" material="" role="button" gui-button="" position="">
 			<a-entity geometry="" material="" rotation="" position=""></a-entity><a-entity geometry="" material="" rotation="" position=""><a-animation attribute="material.color" begin="fadeOut" from="#ed5b21" to="#22252a" dur="400"></a-animation></a-entity><a-entity geometry="" material="" position=""></a-entity></a-gui-button>
