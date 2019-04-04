@@ -13,10 +13,9 @@
       <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
-        <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
       </a-assets>
       
-      <a-entity environment="preset: forest; dressingAmount=500"></a-entity>
+      <a-entity environment="preset: forest; groundColor: #5fac00"></a-entity>
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-entity laser-controls line="color: red; opacity: 0.75"></a-entity>
@@ -38,47 +37,7 @@
       
       <a-box color="red" rotation="0 30 60" scale="2 2 2" position="7 2 -6"></a-box>
       <a-sphere color="yellow" scale="2 2 2" position="3 5 -15"></a-sphere>
-      
-      <a-image position="0 -.025 0" height="300" width="300" rotation="90 0 0" src="#ground" repeat="300 300" material="color:#ebd9e9" geometry=""></a-image>
-      <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7" width="3.5" height="4.5" position="-2 2.5 -4" rotation="0 0 0" gui-item="" geometry="" material="" gui-flex-container="">
-			<a-gui-button width="2.5" height="0.75" onclick="testButtonAction" key-code="32" value="test button" font-family="Arial" margin="0 0 0.05 0" gui-interactable="" gui-item="" geometry="" material="" role="button" gui-button="" position="">
-			<a-entity geometry="" material="" rotation="" position=""></a-entity><a-entity geometry="" material="" rotation="" position=""><a-animation attribute="material.color" begin="fadeOut" from="#ed5b21" to="#22252a" dur="400"></a-animation></a-entity><a-entity geometry="" material="" position=""></a-entity></a-gui-button>
 
-			<a-gui-icon-label-button width="2.5" height="0.75" onclick="testButtonAction" icon="social-github" value="label button" font-family="Arial" margin="0 0 0.05 0" gui-interactable="" gui-item="" geometry="" material="" role="button" gui-icon-label-button="" position="">
-			<a-entity geometry="" material="" rotation="" position=""></a-entity><a-entity geometry="" material="" rotation="" position=""><a-animation attribute="material.color" begin="fadeOut" from="#ed5b21" to="#22252a" dur="400"></a-animation></a-entity><a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity></a-gui-icon-label-button>
-
-			<a-gui-toggle width="2.5" height="0.75" onclick="testToggleAction" value="label toggle" font-family="Arial" margin="0 0 0.05 0" gui-interactable="" gui-item="" material="" geometry="" gui-toggle="" position="">
-			<a-box width="0.42857142857142855" height="0.375" depth="0.01" material="" position="" geometry=""><a-animation begin="toggleAnimation" direction="alternate" attribute="material.color" from="#22252a" to="#ed5b21" dur="50" easing="ease-in-out-cubic"></a-animation><a-box width="0.15" height="0.30000000000000004" depth="0.02" material="" position="" geometry=""><a-animation begin="toggleAnimation" direction="alternate" attribute="position" from="-0.07500000000000001 0 0.02" to="0.07500000000000001 0 0.02" dur="50" easing="ease-in-out-cubic"></a-animation></a-box></a-box><a-entity geometry="" material="" position=""></a-entity></a-gui-toggle>
-
-			<a-gui-icon-button height="0.75" onclick="testButtonAction" icon="social-twitter" margin="0 0 0.05 0" gui-interactable="" gui-item="" geometry="" material="" role="button" gui-icon-button="" position="">
-			<a-entity geometry="" material="" rotation="" position=""></a-entity><a-entity geometry="" material="" rotation="" position=""><a-animation attribute="material.color" begin="fadeOut" from="#ed5b21" to="#22252a" dur="400"></a-animation></a-entity><a-entity geometry="" material="" position=""></a-entity></a-gui-icon-button>
-
-			<a-gui-circle-loader height="0.75" font-family="Arial" gui-item="" geometry="" material="" gui-circle-loader="" position="">
-			<a-entity geometry="" material="" rotation="" position=""></a-entity><a-ring material="" radius-inner="0.25" radius-outer="0.375" theta-start="90" theta-length="10" rotation="" position="" id="loader_ring" geometry=""></a-ring><a-entity geometry="" material="" position="" id="loader_ring_count"></a-entity></a-gui-circle-loader>
-
-		  </a-gui-flex-container>
-      
-      <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7" width="3.5" height="4.5" position="2 2.5 -4" rotation="0 0 0" gui-item="" geometry="" material="" gui-flex-container="">
-			<a-gui-label width="2.5" height="0.75" value="label text" font-family="Arial" margin="0 0 0.05 0" gui-item="" geometry="" material="" gui-label="" position="">
-			<a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity></a-gui-label>
-
-			<a-gui-radio width="2.5" height="0.75" onclick="testToggleAction" value="label radio" font-family="Arial" margin="0 0 0.05 0" gui-interactable="" gui-item="" material="" geometry="" checked="true" gui-radio="" position="">
-			<a-cylinder radius="0.15000000000000002" height="0.01" rotation="" material="" position="" geometry=""><a-torus radius="0.14250000000000002" radius-tubular="0.01" rotation="" material="" geometry=""></a-torus><a-cylinder radius="0.135" height="0.02" rotation="" material="" geometry=""><a-animation begin="radioAnimation" direction="alternate" attribute="material.color" from="#22252a" to="#ed5b21" dur="500" easing="ease-in-out-cubic"></a-animation><a-animation begin="radioAnimation" direction="alternate" attribute="rotation" from="0 0 0" to="-180 0 0" dur="500" easing="ease-in-out-cubic"></a-animation><a-animation begin="radioAnimation" direction="normal" attribute="position" from="0 0 0" to="0 0.3 0 " dur="300" easing="ease-in-out-cubic"></a-animation><a-animation begin="radioAnimation" direction="normal" attribute="position" from="0 0.3 0" to="0 0 0 " delay="300" dur="200" easing="ease-in-out-cubic"></a-animation></a-cylinder></a-cylinder><a-entity geometry="" material="" position=""></a-entity></a-gui-radio>
-
-			<a-gui-progressbar width="2.5" height="0.25" margin="0 0 0.05 0" gui-item="" geometry="" material="" gui-progressbar="" position="">
-			<a-entity geometry="" material="" position="" id="progress_meter"></a-entity></a-gui-progressbar>
-
-			<a-gui-circle-timer height="0.75" count-down="5" font-family="Arial" margin="0 0 0.05 0" gui-item="" geometry="" material="" gui-circle-timer="" position="">
-			<a-entity geometry="" material="" rotation="" position=""></a-entity><a-ring material="" radius-inner="0.25" radius-outer="0.375" theta-start="-1" theta-length="3" position="" geometry=""></a-ring><a-ring material="" radius-inner="0.25" radius-outer="0.375" theta-start="89" theta-length="3" position="" geometry=""></a-ring><a-ring material="" radius-inner="0.25" radius-outer="0.375" theta-start="179" theta-length="3" position="" geometry=""></a-ring><a-ring material="" radius-inner="0.25" radius-outer="0.375" theta-start="269" theta-length="3" position="" geometry=""></a-ring><a-ring material="" radius-inner="0.25" radius-outer="0.375" theta-start="0" theta-length="10" rotation="" position="" id="loader_ring" geometry=""></a-ring><a-entity geometry="" material="" position="" id="loader_ring_count"></a-entity></a-gui-circle-timer>
-
-			<a-gui-slider width="2.5" height="0.75" onclick="testSliderAction" percent="0.29" margin="0 0 0.05 0" gui-interactable="" gui-item="" geometry="" material="" gui-slider="" position="">
-			<a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" rotation="" position=""><a-entity geometry="" material="" position=""></a-entity></a-entity></a-gui-slider>
-
-			<a-gui-input width="2.5" height="0.75" onclick="testInputAction" font-family="Arial" value="Hello Wor_" gui-interactable="" gui-item="" geometry="" material="" role="input" gui-input="" position="">
-			<a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity><a-entity geometry="" material="" position=""></a-entity></a-gui-input>
-
-		  </a-gui-flex-container>
-      
     </a-scene>
   </body>
 </html>
