@@ -37,14 +37,29 @@
         depthWrite="false">
       </a-pointcloud>
 	    
-	<a-camera>
-   	 <a-cursor id="cursor">
-     	 <a-animation begin="click" easing="ease-in" attribute="scale"
-                   fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
-     	 <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale"
-                   from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
-   	 </a-cursor>
- 	</a-camera>
+	<a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7" width="3.5" height="4.5"
+		position="2 2.5 -4" rotation="0 0 0">
+		
+		<a-entity id="cameraRig" position="0 1.6 0">
+			<a-camera look-controls wasd-controls position="0 0 0">
+				<a-gui-cursor id="cursor"
+						  raycaster="objects: [gui-interactable]"
+						  fuse="false"
+				>
+				</a-gui-cursor> <!-- /cursor -->
+			</a-camera> <!-- /camera -->
+		</a-entity>
+		
+		<a-gui-button 
+		width="2.5" height="0.75"
+		onclick="buttonActionFunction" key-code="32"
+		value="test button"
+		font-family="Arial"
+		margin="0 0 0.05 0"
+	>
+	</a-gui-button>
+
+	</a-gui-flex-container>
       
       <a-box color="red" rotation="0 30 60" scale="2 2 2" position="7 2 -6"></a-box>
       <a-sphere color="yellow" scale="2 2 2" position="3 5 -15"></a-sphere>
