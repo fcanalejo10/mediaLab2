@@ -28,14 +28,17 @@
          flex-direction="column" justify-content="center" align-items="normal"
          opacity="0.7" position="2 2.5 -4" rotation="0 0 0" >
          <a-gui-icon-button
-	      height="0.75"
+	      height="1" 
 	      icon="social-twitter"
 	      margin="0 0 0.05 0" 
 	      event-set__enter="_event: mouseenter; scale: 2 2 2" event-set__leave="_event: mouseleave; scale: 1 1 1" >
          </a-gui-icon-button>
-	      
+      </a-gui-flex-container>
+      <a-gui-flex-container
+         flex-direction="column" justify-content="center" align-items="normal"
+         opacity="0.7" position="0 2.5 -4" rotation="0 0 0" >
 	 <a-gui-button
-	      height="0.75"
+	      height="1" width="2.5"
 	      value="ZOOM IN" font-family="Arial"
 	      margin="0 0 0.05 0" 
 	      onclick="zoomIn()" >
@@ -48,7 +51,7 @@
 	      </script>
          </a-gui-button>
 	  <a-gui-button
-	      height="0.75"
+	      height="1" width="2.5"
 	      value="ZOOM OUT" font-family="Arial"
 	      margin="0 0 0.05 0" 
 	      onclick="zoomOut()" >
@@ -61,6 +64,15 @@
 	      </script>
          </a-gui-button>
       </a-gui-flex-container>
+	    
+      <a-gui-flex-container
+         flex-direction="column" justify-content="center" align-items="normal"
+         opacity="0.7" position="-2 2.5 -4" rotation="0 0 0" >
+	      
+	      
+	      
+      </a-gui-flex-container>
+	    
 	    
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#8FF7FF" 
 	 event-set__enter="_event: mouseenter; color: #8FF7FF" event-set__leave="_event: mouseleave; color: #4CC3D9" 
