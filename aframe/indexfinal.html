@@ -26,8 +26,8 @@
       
       <a-gui-flex-container
          flex-direction="column" justify-content="center" align-items="normal"
-         opacity="0.7" position="2 2.5 -4" rotation="0 0 0" >
-         <a-gui-icon-button
+         opacity="0.7" position="3 2.5 -4" rotation="0 0 0" >
+         <a-gui-button
               id="iconbutton"
 	      height="1" 
 	      icon="social-twitter"
@@ -38,10 +38,10 @@
 	      <script>
 		  function visible(){
 			  var box = document.querySelector("#box");
-			  box.setAttribute('rotate', { x: 45, y: 45, z: 0 });
+			  box.setAttribute('box', 'rotate', { x: 45, y: 45, z: 0 });
 		  }
 	      </script>
-         </a-gui-icon-button>
+         </a-gui-button>
       </a-gui-flex-container>
       <a-gui-flex-container
          flex-direction="column" justify-content="center" align-items="normal"
