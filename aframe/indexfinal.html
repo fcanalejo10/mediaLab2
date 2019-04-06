@@ -38,13 +38,18 @@
 	      height="0.75"
 	      icon="social-twitter"
 	      margin="0 0 0.05 0" 
-	      toogle="true"
+	      value="zoom button"
 	      onclick="zoom()" >
 		
 	      <script>
 		  function zoom(){
 			  var camera = document.querySelector('#cam');
-			  camera.setAttribute('camera', 'zoom', 2);
+			  if(camera.getAttribute('camera','zoom')==1){
+				  camera.setAttribute('camera', 'zoom', 2);
+			  }
+			  else{
+				  camera.setAttribute('camera', 'zoom', 1);
+			  }
 		  }
 	      </script>
          </a-gui-icon-button>
