@@ -36,15 +36,20 @@
 	      
 	 <a-gui-icon-button
 	      height="0.75"
+	      value="ZOOM" font-family="Arial"
 	      icon="social-twitter"
 	      margin="0 0 0.05 0" 
-	      toogle="true"
 	      onclick="zoom()" >
 		
 	      <script>
 		  function zoom(){
 			  var camera = document.querySelector('#cam');
-			  camera.setAttribute('camera', 'zoom', 2);
+			  var zoom = camera.getAttribute('camera', 'zoom');
+			  if(zoom==1){
+				zoom = camera.setAttribute('camera', 'zoom', 2);	  
+			  } else{
+				zoom = camera.setAttribute('camera', 'zoom', 1);
+			  }
 		  }
 	      </script>
          </a-gui-icon-button>
