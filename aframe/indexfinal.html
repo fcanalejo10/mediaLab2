@@ -20,7 +20,7 @@
       </a-assets>
 
       <a-plane src="#groundTexture" rotation="-90 0 0" height="200" width="200"></a-plane>
-      <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
+      <a-sky height="2048" radius="200" src="#skyTexture" theta-length="90" width="2048"></a-sky>
       
       <a-light id="light" type="ambient" intensity "" color="#C5D5FA"></a-light>
       
@@ -38,7 +38,7 @@
 	      <script>
 		  function visible(){
 			  var box = document.querySelector("#box");
-			  box.setAttribute('box', 'visible', false);
+			  box.setAttribute('box', 'rotate', { x: 45, y: 45, z: 0 });
 		  }
 	      </script>
          </a-gui-icon-button>
