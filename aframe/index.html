@@ -33,19 +33,6 @@
         src="url(sculpt.ply)" 
         size="0.01">
       </a-pointcloud>
-      <a-pointcloud 
-        id="cloud"
-        scale="0.5 0.5 0.5" 
-        position="1.5 2 0.5" 
-        src="url(Sphere.ply)" 
-        size="0.05"
-        texture="url(VGTU-logo.png)"
-        depthWrite="false">
-      </a-pointcloud>
-      
-      
-      
-      
       
       <a-gui-flex-container
          flex-direction="column" justify-content="center" align-items="normal"
@@ -109,7 +96,7 @@
 	      <script>
 		  function zoomIn(){
 			  var camera = document.querySelector('#sculpture');
-			  camera.setAttribute('size', 0.02);
+			  camera.setAttribute('scale', {x: 0.1, y: 0.1, z: 0.1});
 		  }
 	      </script>
          </a-gui-button>
@@ -122,8 +109,7 @@
 	      <script>
 		  function zoomOut(){
 			  var camera1 = document.querySelector('#sculpture');
-			  camera1.setAttribute('size', 0.01);
-		  }
+			  camera1.setAttribute('scale', {x: 0.1, y: 0.1, z: 0.1});
 	      </script>
          </a-gui-button>
 </a-gui-flex-container>
