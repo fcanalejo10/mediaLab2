@@ -55,16 +55,47 @@
 	            height="1" 
 	            margin="0 0 0.05 0" 
 	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
-	            onclick="visible()"    >
+	            onclick="rotate1()"    >
 		 
 	            <script>
-		          function visible(){
+		          function rotate1(){
 			              var box = document.querySelector("#sculpture");
-			              box.setAttribute('rotation', { x: 45, y: 45, z: 0 });
+			              box.object3D.rotation.x += Math.PI;
 		          }
 	            </script>
          </a-gui-button>
       </a-gui-flex-container>
+	    
+      <a-gui-flex-container
+         flex-direction="column" justify-content="center" align-items="normal"
+         opacity="0.7" position="0 2.5 -4" rotation="0 0 0" >
+	 <a-gui-button
+	      height="1" width="2.5"
+	      value="ZOOM IN" font-family="Arial"
+	      margin="0 0 0.05 0" 
+	      onclick="zoomIn()" >
+		
+	      <script>
+		  function zoomIn(){
+			  var camera = document.querySelector('#cam');
+			  camera.setAttribute('camera', 'zoom', 2);
+		  }
+	      </script>
+         </a-gui-button>
+	  <a-gui-button
+	      height="1" width="2.5"
+	      value="ZOOM OUT" font-family="Arial"
+	      margin="0 0 0.05 0" 
+	      onclick="zoomOut()" >
+		
+	      <script>
+		  function zoomOut(){
+			  var camera = document.querySelector('#cam');
+			  camera.setAttribute('camera', 'zoom', 1);
+		  }
+	      </script>
+         </a-gui-button>
+</a-gui-flex-container>
       
 	    
 	<a-camera id="cam" position="" rotation="0 0 0" scale="" visible="" camera="" look-controls="" wasd-controls="">
