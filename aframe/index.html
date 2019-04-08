@@ -49,7 +49,7 @@
       
       <a-gui-flex-container
          flex-direction="column" justify-content="center" align-items="normal"
-         opacity="0.7" position="-5 2.5 -4" rotation="-60 0 0" >
+         opacity="0.7" position="-5 2.5 -4" rotation="0 40 0" >
          <a-gui-button
               id="iconbutton"
 	            height="1" 
@@ -65,69 +65,11 @@
 	            </script>
          </a-gui-button>
       </a-gui-flex-container>
-      <a-gui-flex-container
-         flex-direction="column" justify-content="center" align-items="normal"
-         opacity="0.7" position="0 2.5 -4" rotation="0 0 0" >
-	 <a-gui-button
-	      height="1" width="2.5"
-	      value="ZOOM IN" font-family="Arial"
-	      margin="0 0 0.05 0" 
-	      onclick="zoomIn()" >
-		
-	      <script>
-		  function zoomIn(){
-			  var camera = document.querySelector('#cam');
-			  camera.setAttribute('camera', 'zoom', 2);
-		  }
-	      </script>
-         </a-gui-button>
-	  <a-gui-button
-	      height="1" width="2.5"
-	      value="ZOOM OUT" font-family="Arial"
-	      margin="0 0 0.05 0" 
-	      onclick="zoomOut()" >
-		
-	      <script>
-		  function zoomOut(){
-			  var camera = document.querySelector('#cam');
-			  camera.setAttribute('camera', 'zoom', 1);
-		  }
-	      </script>
-         </a-gui-button>
-      </a-gui-flex-container>
+      
 	    
-      <a-gui-flex-container
-         flex-direction="column" justify-content="center" align-items="normal"
-         opacity="0.7" position="-3 2.5 -4" rotation="0 0 0" >
-	 <a-gui-button
-	      height="1" width="2.5"
-	      value="LUMOS MAXIMA" font-family="Arial"
-	      margin="0 0 0.05 0" 
-	      onclick="lightIn()" >
-		
-	      <script>
-		  function lightIn(){
-			  var light = document.querySelector('#light');
-			  light.setAttribute('light', 'intensity', 3);
-		  }
-	      </script>
-         </a-gui-button>
-	  <a-gui-button
-	      height="1" width="2.5"
-	      value="LIGHTS OUT" font-family="Arial"
-	      margin="0 0 0.05 0" 
-	      onclick="lightOut()" >
-		
-	      <script>
-		  function lightOut(){
-			  var light = document.querySelector('#light');
-			  light.setAttribute('light', 'intensity', 1);
-		  }
-	      </script>
-         </a-gui-button>
-	      
-	      
-</a-gui-flex-container>
+	<a-camera id="cam" position="" rotation="0 0 0" scale="" visible="" camera="" look-controls="" wasd-controls="">
+        	<a-cursor position="" rotation="" scale="" visible="" material="" raycaster="" cursor="" geometry=""></a-cursor>
+	</a-camera>
 
     </a-scene>
   </body>
