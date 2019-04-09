@@ -148,7 +148,7 @@
 	            <script>
 		          function reset(){
 			              var el4 = document.querySelector("#sculpture");
-			              el.object3D.scale.set(0.01, 0.01, 0.01);
+			              el4.object3D.scale.set(0.01, 0.01, 0.01);
 		          }
 	            </script>
          </a-gui-button>
@@ -213,12 +213,12 @@
 	            height="1" font-size="50px"
 	            margin="0 0 0.05 0" 
 	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
-	            onclick="reset()"    >
+	            onclick="resetp()"    >
 		 
 	            <script>
-		          function reset(){
-			              var el4 = document.querySelector("#sculpture");
-			              el.object3D.position.set(0 0.08 -5.5);
+		          function resetp(){
+			              var pp = document.querySelector("#sculpture");
+			              pp.object3D.position.set(0 0.08 -5.5);
 		          }
 	            </script>
          </a-gui-button>
