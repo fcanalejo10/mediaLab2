@@ -139,52 +139,86 @@
          opacity="0.7" position="4 2.5 -4" rotation="0 -20 0" >
          <a-gui-button
               id="iconbutton"
-		    value="Increase X"
-	            height="1" font-size="400"
+		    value="Reset size"
+	            height="1" font-size="50px"
 	            margin="0 0 0.05 0" 
 	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
-	            onclick="decrease()"    >
+	            onclick="reset()"    >
 		 
 	            <script>
-		          function decrease(){
+		          function reset(){
 			              var el4 = document.querySelector("#sculpture");
-			              if(el4.object3D.scale.x()<0.01){
-					      el4.object3D.scale.x -= 0.01;
-				      }
+			              el.object3D.scale.set(0.01, 0.01, 0.01);
 		          }
 	            </script>
          </a-gui-button>
-	 <a-gui-button
+      </a-gui-flex-container> 
+      
+      <a-gui-flex-container
+         flex-direction="column" justify-content="center" align-items="normal"
+         opacity="0.7" position="2 2.5 -4" rotation="0 -10 0" >
+         <a-gui-button
               id="iconbutton"
-		    value="Increase Y"
-	            height="1" font-size="80px"
-	            margin="0 0 0.05 0" 
-	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
-	            onclick="decrease1()"    >
-		 
-	            <script>
-		          function decrease1(){
-			              var el5 = document.querySelector("#sculpture");
-			              if(el5.object3D.scale.y()<0.01){
-					      el5.object3D.scale.y -= 0.01;
-				      }
-		          }
-	            </script>
-         </a-gui-button>
-	 <a-gui-button
-              id="iconbutton"
-		    value="Increase Z"
+		    value="Move X"
 	            height="1" font-size="400"
 	            margin="0 0 0.05 0" 
 	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
-	            onclick="decrease2()"    >
+	            onclick="aaa()"    >
 		 
 	            <script>
-		          function decrease2(){
-			              var el6 = document.querySelector("#sculpture");
-			              if(el6.object3D.scale.z() <0.01){
-					      el6.object3D.scale.z -= 0.01;
-				      }
+		          function aaa(){
+			              var aa = document.querySelector("#sculpture");
+			              aa.object3D.position.x += 0.01;
+		          }
+	            </script>
+         </a-gui-button>
+	 <a-gui-button
+              id="iconbutton"
+		    value="Move Y"
+	            height="1" font-size="400"
+	            margin="0 0 0.05 0" 
+	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
+	            onclick="sss()"    >
+		 
+	            <script>
+		          function sss(){
+			              var ss = document.querySelector("#sculpture");
+			              ss.object3D.position.y += 0.01;
+		          }
+	            </script>
+         </a-gui-button>
+	 <a-gui-button
+              id="iconbutton"
+		    value="Move Z"
+	            height="1" font-size="400"
+	            margin="0 0 0.05 0" 
+	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
+	            onclick="ddd()"    >
+		 
+	            <script>
+		          function ddd(){
+			              var dd = document.querySelector("#sculpture");
+			              dd.object3D.position.z += 0.01;
+		          }
+	            </script>
+         </a-gui-button>
+      </a-gui-flex-container>
+	    
+      <a-gui-flex-container
+         flex-direction="column" justify-content="center" align-items="normal"
+         opacity="0.7" position="8 2.5 -4" rotation="0 -40 0" >
+         <a-gui-button
+              id="iconbutton"
+		    value="Reset position"
+	            height="1" font-size="50px"
+	            margin="0 0 0.05 0" 
+	            event-set__enter="_event: mouseenter; scale: 1.3 1.3 1.3" event-set__leave="_event: mouseleave; scale: 1 1 1" 
+	            onclick="reset()"    >
+		 
+	            <script>
+		          function reset(){
+			              var el4 = document.querySelector("#sculpture");
+			              el.object3D.position.set(0 0.08 -5.5);
 		          }
 	            </script>
          </a-gui-button>
