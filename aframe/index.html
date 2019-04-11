@@ -216,17 +216,17 @@
 		  }
 	      </script>
          </a-gui-button>
-	  <a-gui-button
+	 <a-gui-button
 	      height="1" width="2.5"
 	      value="ZOOM OUT" font-family="Arial" font-size="50px"
 	      margin="0 0 0.05 0" 
-	      onclick="out()" >
-		
+	      onclick="zoomOut()" >
 	      <script>
-		  function out(){
-			  var kkk = document.querySelector('#cam');
-			  kkk.setAttribute('camera', 'zoom', 1);
-		  </script>
+		  function zoomOut(){
+			  var out = document.querySelector('#cam');
+			  out.setAttribute('camera', 'zoom', 2);
+		  }
+	      </script>
          </a-gui-button>
 	</a-gui-flex-container>
       
